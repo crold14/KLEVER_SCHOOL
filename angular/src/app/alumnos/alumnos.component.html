@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>LISTADO DE ALUMNOS</h1>
+    <div class="alumnos">
+        <div class="alumno" *ngFor="let alumno of arrAlumnos">
+            <h3>Nombre: {{alumno.Full_name}}</h3>
+            <p>Email: {{alumno.email}} </p>
+            <p>id; {{alumno.idUser}}</p>
+
+            <button type="button" class="btn btn-danger btn-lg" (click)="onClick(alumno.idUser)" [routerLink]="['/alumnos']" routerLinkActive="activo">ELIMINAR </button>
+            <button type=" button" class="btn btn-warning btn-lg" [routerLink]="['/alumnos',alumno.idUser]" routerLinkActive="activo">Modificar datos</button>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/alumnos/new']" routerLinkActive="activo">AÑADIR ALUMNO</button>
+
+</div>

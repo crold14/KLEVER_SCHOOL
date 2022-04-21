@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 class="my-4">Completa para registrar el alumno</h2>
+    <div class="container">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class=" px-4 py-3 ">
+            <div class="mb-3 ">
+                <label class="form-label">Indica el nombre del alumno</label>
+                <input type="text" class="form-control" formControlName="Full_name">
+                <p class="error" *ngIf="checkError('Full_name', 'required')">El campo Curso es requerido</p>
+            </div>
+            <div class="mb-3 ">
+                <label class="form-label">Introduce su email</label>
+                <input type="text" class="form-control" formControlName="email">
+                <p class="error" *ngIf="checkError('email', 'required')">El campo Curso es requerido</p>
+            </div>
+
+            <input type="submit" value="Añadir alumno" class="btn btn-info" [disabled]="!formulario.valid">
+
+        </form>
+        <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/alumnos']" routerLinkActive="activo">Volver a lista de alumnos</button>
+    </div>
+</div>

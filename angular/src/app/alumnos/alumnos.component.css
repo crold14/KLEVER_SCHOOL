@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+}
+
+.alumnos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+
+.alumno {
+
+    background-color: #add8e6;
+    border-radius: 15px;
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+}
+
+button {
+    border-radius: 15px;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+
+}
